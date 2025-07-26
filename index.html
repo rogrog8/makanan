@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kalori Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍏 Kalkulator Kalori Makanan</h1>
+        
+        <!-- Form Pencarian -->
+        <div class="search-box">
+            <input type="text" id="foodSearch" placeholder="Cari makanan...">
+            <button onclick="searchFood()">Cari</button>
+        </div>
+
+        <!-- Hasil Pencarian -->
+        <div id="searchResults" class="results"></div>
+
+        <!-- Makanan Dikonsumsi -->
+        <div class="consumed-foods">
+            <h2>📋 Daftar Konsumsi Hari Ini</h2>
+            <ul id="foodList"></ul>
+            <div class="total">
+                <p>Total Kalori: <span id="totalCalories">0</span> kkal</p>
+                <button onclick="resetList()">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Data oleh <a href="https://world.openfoodfacts.org/" target="_blank">Open Food Facts</a>
+    </footer>
+
+    <script src="food-db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
